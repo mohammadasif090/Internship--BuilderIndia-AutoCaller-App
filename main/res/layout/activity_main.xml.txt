@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_light"
+    android:minHeight="141dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/filePath"
+        android:layout_width="266dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="Give path for file"
+        android:textAlignment="center"
+        android:textStyle="italic"
+        app:layout_constraintBaseline_toBaselineOf="@+id/fileButton"
+        app:layout_constraintEnd_toStartOf="@+id/fileButton"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/audioPath"
+        android:layout_width="266dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="Give path for audio file"
+        android:textAlignment="center"
+        android:textStyle="italic"
+        app:layout_constraintBaseline_toBaselineOf="@+id/audioButton"
+        app:layout_constraintEnd_toStartOf="@+id/audioButton"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/fileButton"
+        android:layout_width="78dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/colorPrimary"
+        android:text="Browse"
+        android:textColor="@android:color/background_light"
+        android:textSize="11sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/audioButton"
+        android:layout_width="78dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/colorPrimary"
+        android:text="Browse"
+        android:textColor="@android:color/background_light"
+        android:textSize="11sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fileButton" />
+
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="21dp"
+        android:scrollbars="vertical"
+        android:text="TextView"
+        android:textColor="@android:color/black"
+        android:textStyle="italic"
+        android:verticalScrollbarPosition="right"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/callNext"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fileContent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/fileContent"
+        android:layout_width="103dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="file content"
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/audioPath" />
+
+    <Button
+        android:id="@+id/call"
+        android:layout_width="80dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="Auto call"
+        android:textSize="10sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/fileContent"
+        app:layout_constraintEnd_toStartOf="@+id/reset"
+        app:layout_constraintStart_toEndOf="@+id/fileContent" />
+
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="126dp"
+        android:layout_height="38dp"
+        android:layout_marginEnd="8dp"
+        android:text="reset"
+        android:textSize="10sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/call"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/callNext"
+        android:layout_width="80dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="call\n\nnext\n\nnumber"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/status"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/help" />
+
+    <Button
+        android:id="@+id/help"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="open\nhelp!"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/status"
+        app:layout_constraintTop_toBottomOf="@+id/reset" />
+
+</android.support.constraint.ConstraintLayout>
